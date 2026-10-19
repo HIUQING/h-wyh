@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int num;
-    scanf("%d",&num);
-    int ge,shi,bai,qian;
-    ge=num%10;
-    shi=(num/10)%10;
-    bai=(num/100)%10;
-    qian=(num/1000)%10;
-printf("%d%d%d%d\n",ge,shi,bai,qian);
+    int sec1;
+    scanf("%d",&sec1);
+    int min,hou,sec2;
+    hou=sec1/3600;
+	min=(sec1/60)%60;
+	sec2=sec1-hou*3600-min*60;
+    printf("%.1d%.1d%d\n",hou,min,sec2);
     return 0;
 }
